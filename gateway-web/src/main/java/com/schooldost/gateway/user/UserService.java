@@ -8,10 +8,8 @@ import org.springframework.stereotype.Service;
 
 import com.schooldost.gateway.mongodb.model.Role;
 import com.schooldost.gateway.mongodb.model.User;
-import com.schooldost.gateway.repository.ClassDetailsRepository;
 import com.schooldost.gateway.repository.RoleRepository;
 import com.schooldost.gateway.repository.UserRepository;
-import com.schooldost.service.mongodb.model.ClassDetails;
 
 @Service
 public class UserService {
@@ -19,8 +17,6 @@ public class UserService {
 	@Autowired
 	private UserRepository userRepository;
 	
-	@Autowired
-	private ClassDetailsRepository classDetailsRepository;
 	
 	@Autowired
 	private RoleRepository roleRepository;
@@ -91,8 +87,5 @@ public class UserService {
 		return roleRepository.save(role);
 	}
 	
-	public ClassDetails createClass(ClassDetails classDetails) {
-		System.out.println("createClass :: classDetails :: " + classDetails);
-		return classDetailsRepository.save(classDetails);
-	}
+	
 }

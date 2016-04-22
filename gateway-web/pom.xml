@@ -23,11 +23,11 @@
 	</properties>
 
 	<dependencies>
-		<dependency>
+		<!--dependency>
 			<groupId>com.schooldost</groupId>
 			<artifactId>schoolDostService-impl</artifactId>
 			<version>1.0-SNAPSHOT</version>
-		</dependency>
+		</dependency-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-zuul</artifactId>

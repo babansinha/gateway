@@ -3,20 +3,13 @@ package com.schooldost.gateway.util;
  * 
  */
 
-
-import java.util.Arrays;
-import java.util.List;
-
-import com.schooldost.service.constants.AuthConstants;
-
-
 /**
  * @author sinha.baban@gmail.com
  *
  */
 public class AuthUtils {
 
-	private static final List<String> ROLE_SUPER_ADMIN;
+	/*private static final List<String> ROLE_SUPER_ADMIN;
 	private static final List<String> ROLE_ADMIN;
 	private static final List<String> ROLE_PRINCIPLE;
 	private static final List<String> ROLE_TEACHER;
@@ -41,12 +34,7 @@ public class AuthUtils {
 		ROLE_DRIVER = Arrays.asList(AuthConstants.ROLE_READ);
 	}
 
-	/**
-	 * Method will return list of permission by given role
-	 * 
-	 * @param role
-	 * @return List of permission
-	 */
+	
 	public static List<String> getPermissions(final String role) {
 		switch (role) {
 		case AuthConstants.ROLE_SUPER_ADMIN:
@@ -70,5 +58,5 @@ public class AuthUtils {
 		default:
 			return ROLE_GUEST;
 		}
-	}
+	}*/
 }

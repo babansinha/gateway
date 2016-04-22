@@ -15,10 +15,6 @@ import org.springframework.stereotype.Service;
 import com.schooldost.gateway.mongodb.model.Role;
 import com.schooldost.gateway.mongodb.model.User;
 import com.schooldost.gateway.user.UserService;
-import com.schooldost.gateway.util.AuthUtils;
-import com.schooldost.service.constants.AuthConstants;
-import com.schooldost.service.constants.SchoolDostConstants;
-import com.schooldost.service.mongodb.model.ClassDetails;
 
 @Service
 public class UserDetailsService implements org.springframework.security.core.userdetails.UserDetailsService {
@@ -52,7 +48,7 @@ public class UserDetailsService implements org.springframework.security.core.use
 		
 		if(user != null) {
 			return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(),
-					AuthConstants.ENABLED, AuthConstants.ENABLED, AuthConstants.ENABLED, AuthConstants.ENABLED, getAuthorities(user.getRole().getPermissions()));
+					true, true, true, true, getAuthorities(user.getRole().getPermissions()));
 		}
 		
 		return null;
@@ -81,33 +77,33 @@ public class UserDetailsService implements org.springframework.security.core.use
 		// Create new records
 		Role adminRole = new Role();
 		adminRole.setDomainId(UUID.randomUUID().toString());
-		adminRole.setRole(AuthConstants.ROLE_ADMIN);
-		adminRole.setPermissions(AuthUtils.getPermissions(AuthConstants.ROLE_ADMIN) );
+		adminRole.setRole("ROLE_ADMIN");
+		//adminRole.setPermissions(AuthUtils.getPermissions(AuthConstants.ROLE_ADMIN) );
 		
 		Role userRole = new Role();
 		userRole.setDomainId(UUID.randomUUID().toString());
-		userRole.setRole(AuthConstants.ROLE_USER);
-		userRole.setPermissions(AuthUtils.getPermissions(AuthConstants.ROLE_USER));
+		userRole.setRole("ROLE_USER");
+		//userRole.setPermissions(AuthUtils.getPermissions(AuthConstants.ROLE_USER));
 		
 		Role studentRole = new Role();
 		studentRole.setDomainId(UUID.randomUUID().toString());
-		studentRole.setRole(AuthConstants.ROLE_STUDENT);
-		studentRole.setPermissions(AuthUtils.getPermissions(AuthConstants.ROLE_STUDENT));
+		studentRole.setRole("ROLE_STUDENT");
+		//studentRole.setPermissions(AuthUtils.getPermissions(AuthConstants.ROLE_STUDENT));
 		
 		Role teacherRole = new Role();
 		teacherRole.setDomainId(UUID.randomUUID().toString());
-		teacherRole.setRole(AuthConstants.ROLE_TEACHER);
-		teacherRole.setPermissions(AuthUtils.getPermissions(AuthConstants.ROLE_TEACHER));
+		teacherRole.setRole("ROLE_TEACHER");
+		//teacherRole.setPermissions(AuthUtils.getPermissions(AuthConstants.ROLE_TEACHER));
 		
 		Role parentsRole = new Role();
 		parentsRole.setDomainId(UUID.randomUUID().toString());
-		parentsRole.setRole(AuthConstants.ROLE_PARENTS);
-		parentsRole.setPermissions(AuthUtils.getPermissions(AuthConstants.ROLE_PARENTS));
+		parentsRole.setRole("ROLE_PARENTS");
+		//parentsRole.setPermissions(AuthUtils.getPermissions(AuthConstants.ROLE_PARENTS));
 
 		Role driverRole = new Role();
 		driverRole.setDomainId(UUID.randomUUID().toString());
-		driverRole.setRole(AuthConstants.ROLE_DRIVER);
-		driverRole.setPermissions(AuthUtils.getPermissions(AuthConstants.ROLE_DRIVER));
+		driverRole.setRole("ROLE_DRIVER");
+		//driverRole.setPermissions(AuthUtils.getPermissions(AuthConstants.ROLE_DRIVER));
 
 		User admin = new User();
 		admin.setDomainId(UUID.randomUUID().toString());
@@ -168,7 +164,7 @@ public class UserDetailsService implements org.springframework.security.core.use
 		userService.createRole(driverRole);
 	}
 	
-	private void initMongoScript() {
+	/*private void initMongoScript() {
 		System.out.println("initMongoScript . . .");
 		mongoTemplate.dropCollection("class_details");
 		ClassDetails classDetails = new ClassDetails();
@@ -222,6 +218,6 @@ public class UserDetailsService implements org.springframework.security.core.use
 		classDetails9.setClassName(SchoolDostConstants.CLASS_10);
 		classDetails9.setSectionName(SchoolDostConstants.SECTION_A);
 		System.out.println("d9 ::" + userService.createClass(classDetails9));
-	}
+	}*/
 
 }
