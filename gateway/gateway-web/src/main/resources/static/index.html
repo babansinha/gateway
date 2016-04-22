@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demoApp">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Neon Admin Panel" />
+<meta name="author" content="" />
+
+<title>School Dost | Login</title>
+
+<link rel="stylesheet"
+	href="assets/js/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css">
+<link rel="stylesheet"
+	href="assets/css/font-icons/entypo/css/entypo.css">
+<!--link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic"-->
+<link rel="stylesheet" href="assets/css/bootstrap.css">
+<link rel="stylesheet" href="assets/css/neon-core.css">
+<link rel="stylesheet" href="assets/css/neon-theme.css">
+<link rel="stylesheet" href="assets/css/neon-forms.css">
+<link rel="stylesheet" href="assets/css/custom.css">
+
+<script src="assets/js/jquery-1.11.0.min.js"></script>
+<script>$.noConflict();</script>
+
+<!-- script src="js/framework/jquery-2.1.4.min.js"></script-->
+<script src="js/framework/bootstrap-3.1.1.min.js"></script>
+<script src="js/framework/angular_1.4.5.min.js"></script>
+<script src="js/framework/angular-route.min.js"></script>
+
+
+<script src="js/directives/footerDirective.js"></script>
+<script src="js/intercepter/LoadingInterceptor.js"></script>
+<script src="js/app.js"></script>
+<script src="js/auth/auth.js"></script>
+<script src="js/login/LoginRoute.js"></script>
+<script src="js/login/LoginController.js"></script>
+<script src="js/home/HomeController.js"></script>
+<script src="js/error/ErrorRoute.js"></script>
+<script src="js/error/ErrorController.js"></script>
+
+<!-- i18n -->
+<!--script src="js/framework/angular-animate.js"></script-->
+<script src="js/framework/angular-cookies.min.js"></script>
+<script src="js/framework/angular-resource.min.js"></script>
+<script src="js/framework/i18n/angular-sanitize.js"></script>
+<script src="js/framework/i18n/angular-touch.js"></script>
+<!-- script src="js/framework/i18n/angular-translate-handler-log.js"></script-->
+<script src="js/framework/i18n/tmhDynamicLocale.min.js"></script>
+<script src="js/framework/i18n/angular-translate.js"></script>
+
+<script src="js/framework/i18n/angular-translate-storage-local.js"></script>
+<script src="js/framework/i18n/angular-translate-storage-cookie.js"></script>
+<script src="js/framework/i18n/angular-translate-loader-static-files.js"></script>
+
+
+<script src="js/services/LocaleService.js"></script>
+<script src="js/directives/LanguageSelectDirective.js"></script>
+
+<!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+<style>
+.login_block {
+	padding-top: 5% !important;
+}
+
+input#username {
+	background: #5e9cd3;
+	border: 1px solid #373e4a;
+	text-align: center;
+	height: 42px;
+	border-radius: 10px;
+}
+
+input#password {
+	height: 42px;
+	background: #5e9cd3;
+	border: 1px solid #373e4a;
+	text-align: center;
+	border-radius: 10px;
+}
+</style>
+
+</head>
+<body class="page-body login-page login-form-fall"
+	data-url="http://neon.dev">
+
+
+	<!-- This is needed when you send requests via Ajax -->
+	<script type="text/javascript">
+var baseurl = '';
+</script>
+	<div class="page-container horizontal-menu">
+		<header class="navbar navbar-fixed-top">
+			<!-- set fixed position by adding class "navbar-fixed-top" -->
+
+			<div class="navbar-inner">
+
+				<!-- logo -->
+				<div class="navbar-brand">
+					<a href="#/login"> <img src="assets/images/logo.png"
+						width="88" alt="" />
+					</a>
+				</div>
+
+				<!-- main menu -->
+
+				<!-- notifiCat. ions and other links -->
+				<ul class="nav navbar-right pull-right">
+
+					<!-- dropdowns -->
+
+
+					<li><a href="#/aboutus" class="dropdown-toggle"> <i
+							class="entypo-info"></i> About Us
+					</a></li>
+
+					<!-- raw links -->
+
+
+
+
+
+					<!-- mobile only -->
+					<li class="visible-xs">
+						<!-- open/close menu icon (do not remove if you want to enable menu on mobile devices) -->
+						<div class="horizontal-mobile-menu visible-xs">
+							<a href="#" class="with-animation"> <!-- add class "with-animation" to support animation -->
+								<i class="entypo-menu"></i>
+							</a>
+						</div>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+		</header>
+	</div>
+	<div class="login-container">
+
+		<div class="login-header login-caret">
+
+			<div class="login-content-1">
+
+				<a href="index.html" class="logo"> <img
+					src="assets/images/Colored Pencils.png"
+					class="img-responsive center-block" />
+				</a>
+
+				<!-- progress bar indicator -->
+				<div class="login-progressbar-indicator">
+					<h3>43%</h3>
+					<span>logging in...</span>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="login-progressbar">
+			<div></div>
+		</div>
+
+
+		<div
+			class="col-md-offset-4 col-md-4 col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10 login_block">
+			<div>
+				<div ng-view></div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!-- Bottom scripts (common) -->
+	<script src="assets/js/gsap/main-gsap.js"></script>
+	<script src="assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"></script>
+	<script src="assets/js/bootstrap.js"></script>
+	<script src="assets/js/joinable.js"></script>
+	<script src="assets/js/resizeable.js"></script>
+	<script src="assets/js/neon-api.js"></script>
+	<script src="assets/js/jquery.validate.min.js"></script>
+	<script src="assets/js/neon-login.js"></script>
+
+
+	<!-- JavaScripts initializations and stuff -->
+	<script src="assets/js/neon-custom.js"></script>
+
+
+	<!-- Demo Settings -->
+	<script src="assets/js/neon-demo.js"></script>
+
+
+</body>
+</html>

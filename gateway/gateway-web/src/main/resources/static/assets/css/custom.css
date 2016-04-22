@@ -1,0 +1,200 @@
+/**
+ *
+ * Apply Here your Custom CSS
+ *
+*/
+
+body {
+	
+}
+
+#Tabs .nav-tabs > li {
+    display: inline-block;
+    margin-bottom: -1px;
+
+    overflow: hidden;
+    float: left;
+    margin: 0 -15px 0 0;
+}
+
+#Tabs .nav > li > a {
+    position: relative;
+    display: block;
+    font-weight: bold;
+    height: 50px;
+  background: #bdedbc;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin: 0 10px 0;
+  box-shadow: 0 0 2px  #fff inset;
+  -webkit-transform: perspective(100px) rotateX(30deg);
+  -moz-transform: perspective(100px) rotateX(30deg);
+  padding: 18px 35px;
+}
+
+#Tabs .nav > li > a:focus, #Tabs .nav > li > a:hover{
+    background-color: #eee !important;
+
+}
+
+#tab-border{
+border: 0.3em solid rgba(0, 166, 81, 0.64);
+    border-top: 0;
+    padding: 10px;
+	border-radius: 8px;
+	background-color: rgba(0, 166, 81, 0.49);
+	}
+	#tab-borderr{
+     border: 0.3em solid rgba(0, 166, 81, 0.64);
+    border-top: 0;
+    padding: 10px;
+	border-radius: 5px;
+	}
+	#tab-borders{
+     border: 0.3em solid rgba(0, 166, 81, 0.64);
+    border-top: 0;
+    padding: 10px;
+	border-radius: 5px;
+	}
+.nav-tabs {
+    border-bottom: 1px solid #FAD839;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+.abv > h3{
+	text-align:center;
+}
+.abv > h3 span{
+	        background-color: #bdedbc;
+    border: 1px solid #ebebeb;
+    padding: 1px;
+    border-radius: 4px;
+}
+.secondhalf{
+	
+    padding: 5px;
+    border: 1px solid gray;
+    margin: 0;
+	border-radius:6px;
+	background-color:rgba(33, 169, 225, 0.38);
+}
+.img-circle{
+	float:right;
+    padding: 3%;
+    float: right;
+    border: 1px;
+    background-color: #ffc9c9;
+    font-size: 18px;
+    color: #000;
+}
+.thirdhalf{
+	
+    padding: 9px;
+    border: 1px solid gray;
+    margin: 0;
+	border-radius:3px;
+	background-color: #bdedbc;
+}
+.fourthhalf{
+	
+    text-align: center;
+    margin-left: 93px
+	}
+.sixthhalf{
+	
+    text-align: center;
+    margin-left: 93px;
+	float: right;
+	
+	}
+.fifthhalf{
+	padding: 4px;
+    border: 1px solid gray;
+	margin-top:10px;
+	margin-bottom:30px;
+    border-radius: 3px;
+    background-color: #bdedbc;
+    text-align: center;
+
+}
+.sevenhalf{
+	float: right;
+    width: 21%;
+    padding: 6px;
+    border: 1px solid gray;
+    margin-left: 8px;
+    border-radius: 3px;
+    background-color: #bdedbc;
+    text-align: center;
+}	
+.two p{
+	font-size:14px;
+	padding:6px;
+}
+
+.buttonHolder{ text-align: center; }
+#btn_s{
+	background-color: #21a9e1;
+    width: 21%;
+    padding: 6px;
+    color: #fff;
+    font-size: 16px;
+	
+}
+#tabs{
+	margin-top:40px
+}
+#formy{
+	background-color:blue;
+	
+}
+#field-1{
+	background-color:#008fb3;
+	overflow:hidden;
+}
+#field-2{
+	background-color:rgba(0, 143, 179, 0.52);
+	overflow:hidden;
+}
+#field-3{
+	background-color:#737881;
+	overflow:hidden;
+}
+#field-4{
+	background-color:rgba(236, 89, 86, 0.36);
+	overflow:hidden;
+}
+#field-5{
+    background-color: blanchedalmond;
+    overflow: hidden;
+    color: black;
+	    margin-top: -9%;
+    margin-left: -7%;
+	width:73%;
+}
+
+#field-12{
+	background-color:#008fb3;
+	overflow:hidden;
+	    margin-left: -96%;
+    margin-top: -6%;
+}
+
+@media screen and (max-width: 400px) {
+   #field-5{
+    margin-top: 0;
+   margin-left: 0;
+   }
+ }
+ @media screen and (max-width: 400px) {
+   #field-12{
+    margin-top: 0;
+   margin-left: 0;
+   }
+ }
+.form-actions {
+    margin: 0;
+    
+    text-align: center;
+	overflow:hidden;
+}

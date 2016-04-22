@@ -1,0 +1,20 @@
+logging:
+  level:
+    org.springframework.security: ERROR
+security:
+  sessions: ALWAYS
+server:
+  port: 8090
+zuul:
+  routes:
+    student:
+      url: http://localhost:8081
+    admin:
+      url: http://localhost:8082
+    service:
+      url: http://localhost:9005
+    schoolDost:
+      url: http://localhost:8083
+multipart:
+    maxFileSize: 5Mb
+    maxRequestSize: 20Mb     
